@@ -1,9 +1,10 @@
 body{
-    font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    color: #1F1E1E;
+    font-family: Open Sans;
+    font-size: 18px;
     font-style: normal;
-    line-height: 1.375;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .page-header{
