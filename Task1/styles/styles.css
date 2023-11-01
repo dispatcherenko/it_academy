@@ -7,10 +7,70 @@ body{
     line-height: normal;
 }
 
-.page-header{
-
+a{
+    text-decoration: none;
 }
 
+.page-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    
+}
+
+    .page-header::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;   
+            background-color: rgba(222, 222, 222, 0.50);
+            backdrop-filter: blur(10px);
+        }
+
+    .page_header__container{
+        box-sizing: border-box;
+        position: relative;
+        margin: 0 auto; 
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: 1414px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-header__logo
+    {
+        margin-right: 237px;
+        display: inline-block;
+        width: 150px;
+        height: 147px;
+    }
+
+    .page-header__logo-img{
+
+    }
+
+    .page-header__user-button{
+        box-sizing: border-box;
+        border: 1px solid var(--1, #1F1E1E);
+        display: inline-flex;
+        padding: 15px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: var(--1, #1F1E1E);
+        font-weight: 600;
+    }
+
+    .page-header__nav{
+        display: inline-block;
+        margin-right: 250px;
+    }
     .page-header__nav-link{
         font-family: "Open Sans";
         color: black;
@@ -18,7 +78,55 @@ body{
         font-weight: 600;
         text-align: center;
         margin: 0 25px;
-        text-decoration: none
+    }
+
+.home{
+    padding-top: 147px;
+}
+
+    .main-header__title{
+        margin: 0 0 70px;
+    }
+
+    .main-header__title, .main-header_text{
+        padding-left: 40px;
+        padding-right: 40px;  
+        color: var(--1, #1F1E1E);
+        text-align: center;
+        font-family: 'Lora', sans-serif;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .main-header_text{
+        margin: 0 auto;
+        max-width: 948px;
+        width: 100%;
+    }
+
+    .main-header_picture{
+        position: relative;
+        width: 100%;
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .main-header_picture::before{
+        content: '';
+        display: block;
+        padding-top: 16%; 
+    }
+
+    .main-header__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
 .page-footer{
