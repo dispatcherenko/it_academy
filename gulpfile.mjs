@@ -3,6 +3,7 @@ import del from "del";
 
 import include from "gulp-file-include";
 import formatHTML from "gulp-format-html";
+import autoprefixer from "autoprefixer";
 
 const recources = {
     html: "src/html/**/*.html",
@@ -14,6 +15,32 @@ const recources = {
     ],
     images: "src/assets/images/**/*.*",
     svgSprite: "src/assets/svg-sprite/*.svg"
+};
+
+const build = gulp.series(
+    clean,
+    copy,
+    includeHtml,
+    style,
+    js,
+    jsCopy,images,
+    svgSprite
+);
+
+const start = gulp.series(build, serve);
+
+export {
+    clean,
+    copy,
+    includeHtml,
+    style,
+    js,
+    jsCopy,
+    images,
+    svgSprite,
+    build,
+    serve,
+    start
 };
 
 function clean() {
@@ -39,12 +66,14 @@ function style() {
     .src("src/styles/styles.less")
     .pipe(plumber())
     .pipe(less())
-    .pipe({
+    .pipe(
         postcss([
-            autoprefixer({overrideBrowserlist: ["last 4 version"]}),
-            sortMediaQeries({sort: "desktop-first"})
+            autoprefixer({ overrideBrowerslist:["last 4 version"] }),
+            sortMediaQueries({
+                sort: "desktop-first"
+            })
         ])
-    })
+    )
     .pipe(gulp.dest("dist/styles"))
     .pipe(minify())
     .pipe(rename("styles.min.css"))
@@ -99,6 +128,40 @@ function images() {
     .pipe(gulp.dest("dist/assets/images"));
 }
 
-function svgSprite() {
-    
+function svgSprite() 
+{
+    return gulp
+    .src(recources.svgSprite)
+    .pipe(
+        svgmin({
+            js2svg: {
+                pretty: true
+            }
+        })
+    )
+    .pipe(
+        svgstore({
+            inlineSvg: true
+        })
+    )
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("dist/assets/icons"))
+}
+
+function serve() {
+    ServiceWorkerRegistration.init({
+        server: "dist"
+    });
+    gulp.watch(recources.html, gulp.series(includeHtml, reloadServer));
+    gulp.watch(recources.less, gulp.series(style, reloadServer));
+    gulp.watch(recources.jsDev, gulp.series(js, reloadServer));
+    gulp.watch(recources.jsVendor, gulp.series(jsCopy, reloadServer));
+    gulp.watch(recources.static, { delay: 500 }, gulp.series(copy, reloadServer));
+    gulp.watch(recources.images, { delay: 500 }, gulp.series(images, reloadServer));
+    gulp.watch(recources.svgSprite, gulp.series(svgSprite, reloadServer));
+}
+
+function reloadServer(done) {
+    server.reload();
+    done();
 }
