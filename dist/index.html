@@ -2,11 +2,32 @@
 
 <html lang="ru">
 
-@@include ('blocks/head.html')
-
+<head>
+  <title>Lenni Art</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles/styles.less" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
 
 <body>
-  @@ include ('blocks/page-header.html')
+  <header class="page-header">
+    <div class="page_header__container">
+      <a href="index.html" class="page-header__logo">
+        <img src="assets/images/logo.svg" class="page-header__logo-img" />
+      </a>
+
+      <nav class="page-header__nav">
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+      </nav>
+
+      <a href="#" class="button page-header__user-button">Войти</a>
+    </div>
+  </header>
 
   <main class="main">
     <div class="home">
@@ -27,9 +48,28 @@
       <section class="contacts home__contacts"></section>
       <div class="doit home__doit"></div>
     </div>
+    <main class="main">
+      <div class="events">
+        <div class="events__container">
+          <h2 class="events__title title">мероприятия</h2>
+          <div class="events__list listing">
+            <article class="event-card  @@class">
+              <a href="#" class="event-card__link">
+                <picture class="event-card__picture">
+                  <img src="@@img" alt="@@alt" class="event-card__img" />
+                </picture>
+                <h4 class="event-card__title">@@title</h4>
+                <p class="event-card__description">@@descr</p>
+                <time datetime="@@datetime" class="event-card__time">@@time</time>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
   </main>
 
-  @@ include ('blocks/page-footer.html')
+  <footer class="page-footer"></footer>
 </body>
 
 </html>

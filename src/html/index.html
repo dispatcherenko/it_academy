@@ -2,11 +2,10 @@
 
 <html lang="ru">
 
-    @@include ('blocks/head.html')
-
+    @@include('blocks/head.html')
     
     <body>
-        @@ include ('blocks/page-header.html')
+        @@include('blocks/page-header.html')
 
         <main class="main">
             <div class="home">
@@ -27,8 +26,9 @@
                 <section class="contacts home__contacts"></section>
                 <div class="doit home__doit"></div>
             </div>
+            @@include('blocks/event-card.html')
         </main>
 
-        @@ include ('blocks/page-footer.html')
+        @@include('blocks/page-footer.html')
     </body>
 </html>
