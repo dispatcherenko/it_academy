@@ -61,7 +61,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-event {
+.event-card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -99,9 +99,9 @@ __link {
           flex-direction: column;
   height: 100%;
 }
-__link:hover __title {
-  color: #A51505;
-  text-decoration: underline;
+__link:active .event-card__title {
+  color: #bc3324;
+  text-decoration-color: #bc3324;
 }
 __title {
   min-height: 64px;
@@ -222,4 +222,10 @@ __nav-link {
 }
 .color-red {
   color: #bc3324;
+}
+@media (hover: hover) {
+  __link:hover .event-card__title {
+    color: #bc3324;
+    text-decoration-color: #bc3324;
+  }
 }

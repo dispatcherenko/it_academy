@@ -1,4 +1,4 @@
-.card-event{
+.event-card{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -27,12 +27,22 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+        &:active{
+            .event-card__title {
+                color: @red;
+                text-decoration-color: @red;
+            }
+        }
+        &:hover .event-card__title{
+            @media (hover: hover)
+            {
+                color: @red;
+                text-decoration-color: @red;
+            }
+        }
     }
 
-    &__link:hover &__title{
-            color: #A51505;
-            text-decoration: underline;
-    }
+    
 
     &__title{
         min-height: 64px;
