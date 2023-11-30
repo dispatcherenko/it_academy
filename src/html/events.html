@@ -8,9 +8,10 @@
 
         <main class="main">
             <div class="events">
-                <div class="events__container">
-                    <h2 class="events__title title">мероприятия</h2>
-                    <div class="events__list listing">
+                <section class="listing events__listing">
+                    <h2 class="listing__title section-title">мероприятия</h2>
+                    <div class="listing__events-list">
+                        <!-- prettier-ignore -->
                         @@loop('blocks/event-card.html', [
                         {
                             "class": "listing__event-card",
@@ -32,7 +33,7 @@
                         },
                         ])
                     </div>
-                </div>
+                </section>
             </div>
         </main>
 
