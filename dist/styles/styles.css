@@ -146,9 +146,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 405px;
   max-width: 100%;
-  min-width: 280px;
   color: #1f1e1e;
 }
 .event-card__link {
@@ -183,7 +181,6 @@ img {
   content: '';
   display: block;
   width: 100%;
-  padding-top: 100%;
 }
 .event-card__picture-img {
   position: absolute;
@@ -193,7 +190,7 @@ img {
 .event-card__title {
   min-height: 64px;
   margin: 0 0 auto;
-  color: var(--1, #1F1E1E);
+  color: var(--1, #1f1e1e);
   font-family: Open Sans;
   font-size: 24px;
   font-style: normal;
@@ -205,13 +202,13 @@ img {
 }
 .event-card__text {
   margin: 0 0 15px;
-  color: var(--1, #1F1E1E);
+  color: var(--1, #1f1e1e);
   font-family: Open Sans;
   font-size: 16px;
   font-weight: 400;
 }
 .event-card__time {
-  color: var(--1, #1F1E1E);
+  color: var(--1, #1f1e1e);
   font-family: Open Sans;
   font-size: 14px;
   font-weight: 300;
@@ -258,7 +255,7 @@ img {
 }
 .page-header__logo {
   display: inline-block;
-  width: 150px;
+  width: 202px;
   height: 147px;
 }
 .page-header__user-button {

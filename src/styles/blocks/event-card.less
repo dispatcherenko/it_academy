@@ -1,8 +1,6 @@
 .event-card{
     display: flex;
-    width: 405px;
     max-width: 100%;
-    min-width: 280px;
     color: @black;
 
     &__link{
@@ -40,7 +38,6 @@
             content: '';
             display: block;
             width: 100%;
-            padding-top: 100%
         }
     }
 
@@ -52,7 +49,7 @@
     &__title{
         min-height: 64px;
         margin: 0 0 auto;
-        color: var(--1, #1F1E1E);
+        color: var(--1, @black);
         font-family: Open Sans;
         font-size: 24px;
         font-style: normal;
@@ -64,14 +61,14 @@
 
     &__text{
         margin: 0 0 15px;
-        color: var(--1, #1F1E1E);
+        color: var(--1, @black);
         font-family: Open Sans;
         font-size: 16px;
         font-weight: 400;
     }
 
     &__time{
-        color: var(--1, #1F1E1E);
+        color: var(--1, @black);
         font-family: Open Sans;
         font-size: 14px;
         font-weight: 300;
