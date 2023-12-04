@@ -1,13 +1,29 @@
-.btn{
-    box-sizing: border-box;
-    border: 1px solid var(--1, @black);
-    display: inline-flex;
-    padding: 15px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: var(--1, @black);
-    font-family: @font1;
-    font-weight: 600;
-    text-decoration: none;
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 15px 40px;
+	border: 1px solid @black;
+	background-color: transparent;
+	outline: none;
+	color: @black;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+	overflow: hidden;
+	cursor: pointer;
+
+	&:active {
+		background-color: @black;
+		color: @white;
+	}
+
+	&:hover {
+		@media (hover: hover) {
+			background-color: @black;
+			color: @white;
+		}
+	}
 }
