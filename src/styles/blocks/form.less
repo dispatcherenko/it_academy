@@ -2,24 +2,57 @@
   &__list {
     display: flex;
     width: 100%;
-    column-gap: 60px;
     row-gap: 30px;
-    column-gap: 60px;
+    column-gap: 28%;
+    margin-bottom: 30px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 59px;
+    row-gap: 30px;
+    margin-bottom: 50px;
   }
   
   &__group {
-    width: calc(50%-30px);
-  }
-
-  &__section {
-    display: flex;
-    flex-wrap: wrap;
+    width: calc(50% - 30px);
   }
 
   &__field {
-    width: 100%;
     &--w50 {
-      width: calc(50%-30px);
+      width: calc(50% - 30px);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    column-gap: 60px;
+  }
+
+  &__btn {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__close {
+    cursor: pointer;
+    max-width: 400px;
+    width: 100%;
+    color: @black;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: 0;
+    background-color: transparent;
+    transition: text-decoration 0.2s;
+    &:hover {
+      @media (hover:hover) {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -44,7 +77,8 @@
   }
 
   &__select,
-  &__text {
+  &__text,
+  &__textarea {
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
@@ -55,7 +89,7 @@
 
     font-size: 16px;
 
-    width: 100%px;
+    width: 100%;
   }
   
   &__select {
@@ -64,7 +98,7 @@
     align-items: flex-start;
     padding: 16px 20px 15px;
     margin-bottom: 30px;
-    width: 405px;
+    width: 100%;
   }
 
   &__inputs {
@@ -76,6 +110,7 @@
     padding-top: 17px;
     padding-bottom: 16px;
     color: @black;
+    width: 100%;
 
     text-align: center;
     &--w55 {
@@ -90,6 +125,29 @@
       font-size: 16px;
       color: @gray-text;
     }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    color: @black;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &--textarea {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-family: @font1;
+      font-size: 18px;
+      color: @black;
+    }
+  }
+
+  &__textarea {
+      height: 150px;
   }
 }
 
@@ -147,61 +205,55 @@
 }
 
 .check {
+  margin-top: 30px;
+  display: block;
   box-sizing: border-box;
   position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 24px;
-  padding-top: 2px;
-  padding-left: 24px;
-  color: @black;
-  cursor: pointer;
-
+  padding-left: 40px;
+  margin-bottom: 40px;
+  
   &__input {
     .is-hidden();
-  }
 
-  &__mark {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    border: 1px solid @black;
-  }
-
-  &__input {
-    .is-hidden();
     &:checked {
-      & ~ .check__mark {
+      &~.check__mark {
         background-color: @black;
         &::after {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
-          left: 7px;
           top: 2px;
+          left: 7px;
+          transform: rotate(45deg);
           width: 6px;
           height: 12px;
           border-bottom: 2px solid @white;
           border-right: 2px solid @white;
-          transform: rotate(45deg);
         }
       }
     }
   }
 
-  &__label {
-    margin-left: 15px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-    &--s {
-      font-size: 14px;
-      line-height: 19px;
-    }
+  &__mark {
+     position: absolute;
+     box-sizing: border-box;
+     top: 0;
+     left: 0;
+     width: 24px;
+     height: 24px;
+     margin-right: 15px;
+     border: 1px solid @black;
+     background-color: transparent;
+     transition: background-color 0.2s;
   }
+
+  &__label {
+    color: @black;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
 }

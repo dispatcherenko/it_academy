@@ -583,25 +583,58 @@ textarea:focus::placeholder {
   display: flex;
   width: 100%;
   row-gap: 30px;
-  -webkit-column-gap: 60px;
-     -moz-column-gap: 60px;
-          column-gap: 60px;
+  -webkit-column-gap: 28%;
+     -moz-column-gap: 28%;
+          column-gap: 28%;
+  margin-bottom: 30px;
 }
-.form__group {
-  width: calc(50%-30px);
-}
-.form__section {
+.form__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-.form__field {
   width: 100%;
+  -webkit-column-gap: 59px;
+     -moz-column-gap: 59px;
+          column-gap: 59px;
+  row-gap: 30px;
+  margin-bottom: 50px;
+}
+.form__group {
+  width: calc(50% - 30px);
 }
 .form__field--w50 {
-  width: calc(50%-30px);
+  width: calc(50% - 30px);
+}
+.form__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 60px;
+     -moz-column-gap: 60px;
+          column-gap: 60px;
+}
+.form__btn {
+  max-width: 400px;
+  width: 100%;
+}
+.form__close {
+  cursor: pointer;
+  max-width: 400px;
+  width: 100%;
+  color: #1f1e1e;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: 0;
+  background-color: transparent;
+  -webkit-transition: -webkit-text-decoration 0.2s;
+  transition: -webkit-text-decoration 0.2s;
+  transition: text-decoration 0.2s;
+  transition: text-decoration 0.2s, -webkit-text-decoration 0.2s;
 }
 .field__radio {
   margin-bottom: 9px;
@@ -620,7 +653,8 @@ textarea:focus::placeholder {
   margin-bottom: 7px;
 }
 .field__select,
-.field__text {
+.field__text,
+.field__textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -628,7 +662,7 @@ textarea:focus::placeholder {
   background-color: #ffffff;
   height: 55px;
   font-size: 16px;
-  width: 100%px;
+  width: 100%;
 }
 .field__select {
   display: -webkit-box;
@@ -642,7 +676,7 @@ textarea:focus::placeholder {
           align-items: flex-start;
   padding: 16px 20px 15px;
   margin-bottom: 30px;
-  width: 405px;
+  width: 100%;
 }
 .field__inputs {
   display: -webkit-box;
@@ -654,6 +688,7 @@ textarea:focus::placeholder {
   padding-top: 17px;
   padding-bottom: 16px;
   color: #1f1e1e;
+  width: 100%;
   text-align: center;
 }
 .field__text--w55 {
@@ -681,6 +716,26 @@ textarea:focus::placeholder {
 .field__text::placeholder {
   font-size: 16px;
   color: #6c6c6c;
+}
+.field__label {
+  display: block;
+  margin-bottom: 5px;
+  color: #1f1e1e;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.field__label--textarea {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: "OpenSans", sans-serif;
+  font-size: 18px;
+  color: #1f1e1e;
+}
+.field__textarea {
+  height: 150px;
 }
 .radio {
   display: -webkit-box;
@@ -751,50 +806,13 @@ textarea:focus::placeholder {
   margin-left: 20px;
 }
 .check {
+  margin-top: 30px;
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  min-height: 24px;
-  padding-top: 2px;
-  padding-left: 24px;
-  color: #1f1e1e;
-  cursor: pointer;
-}
-.check__input {
-  position: absolute !important;
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  -webkit-clip-path: inset(100%) !important;
-          clip-path: inset(100%) !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-.check__mark {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #1f1e1e;
+  padding-left: 40px;
+  margin-bottom: 40px;
 }
 .check__input {
   position: absolute !important;
@@ -815,28 +833,40 @@ textarea:focus::placeholder {
   background-color: #1f1e1e;
 }
 .check__input:checked ~ .check__mark::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
-  left: 7px;
   top: 2px;
+  left: 7px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   width: 6px;
   height: 12px;
   border-bottom: 2px solid #ffffff;
   border-right: 2px solid #ffffff;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+}
+.check__mark {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  border: 1px solid #1f1e1e;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .check__label {
-  margin-left: 15px;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
-}
-.check__label--s {
+  color: #1f1e1e;
+  font-family: Open Sans;
   font-size: 14px;
-  line-height: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .pp {
   -webkit-box-sizing: border-box;
@@ -890,7 +920,7 @@ textarea:focus::placeholder {
   width: 100%;
   max-width: 950px;
   margin: 0 auto;
-  padding: 0 40px 40px;
+  padding-bottom: 40px;
 }
 .pp__sticky-close {
   position: sticky;
@@ -960,6 +990,9 @@ textarea:focus::placeholder {
   .event-card__link:hover .event-card__title {
     color: #bc3324;
     text-decoration-color: #bc3324;
+  }
+  .form__close:hover {
+    text-decoration: underline;
   }
   .pp__x-btn:hover {
     background-color: #a51505;
