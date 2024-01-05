@@ -40,11 +40,58 @@
           для людей, горящих сердец и делом
           место для настоящего
         </p>
-
       </header>
 
       <section class="offers home__offers"></section>
-      <section class="about home__about"></section>
+
+      <section class="about home__about">
+        <div class="about__container">
+          <h2 class="about__section-title section-title"> О нас </h2>
+          <div class="about__block">
+            <h3 class="about__title">
+              Проект «Millennials»
+            </h3>
+            <p class="about__text">
+              Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в реальность.
+            </p>
+            <picture class="about__picture">
+              <img class="about__img" src="assets\images\about\millenials1.jpg" />
+            </picture>
+          </div>
+          <div class="about__block about__block--2">
+            <picture class="about__picture2">
+              <img class="about__img" src="assets\images\about\millenials2.jpg" />
+            </picture>
+            <h3 class="about__title about__title--2">
+              Мы предоставляем площади для вашего мероприятия
+            </h3>
+            <p class="about__text">
+              И оказываем помощь с организацией, если вам это нужно. Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.
+            </p>
+          </div>
+          <div class="about__block about__block--3">
+            <picture class="about__picture3">
+              <img class="about__img2" src="assets\images\about\space.jpg" />
+            </picture>
+            <div class="about__wrapper">
+              <p class="about__text about__text--extra">
+                Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.
+              </p>
+              <a href="#" class="about__link link">
+                <span class="link__text">
+                  Смотреть
+                </span>
+                <span class="link__arrow">
+                  <svg class="link__icon" width="91" height="60">
+                    <use xlink:href="assets/icons/symbols.svg#link" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="upcoming home__upcoming"></section>
 
       <section class="listing home__listing">
@@ -112,116 +159,126 @@
         <a href="#" class="listing__link link">Смотреть все</a>
       </section>
 
-      <section class="contacts home__contacts"></section>
-
-      <div class="doit home__doit"></div>
-    </div>
-  </main>
-
-  <footer class="page-footer"></footer>
-
-  <div class="pp" id="eventPP">
-    <div class="pp__wrapper">
-      <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
-          <svg class="x-btn__icon">
-            <use xlink:href="assets/icons/symbols.svg#x"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="pp__container">
-        <h2 class="pp__title">Заполните форму
-          <br />
-          и мы подберем площадку
-        </h2>
-        <form class="pp__form form">
-          <div class="form__list">
-            <div class="form__field field">
-              <h6 class="field__title">Формат мероприятия:</h6>
-              <div class="field__radio radio">
-                <label class="radio__label">
-                  <input type="radio" name="format" value="seminar" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Мастер-класс/семинар</span>
-                </label>
-                <label class="radio__label">
-                  <input type="radio" name="format" value="concert" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Концерт/выступление</span>
-                </label>
-                <label class="radio__label">
-                  <input type="radio" name="format" value="exhib" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Выставка/показ</span>
-                </label>
-                <label class="radio__label">
-                  <input type="radio" name="format" value="else" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Другое</span>
-                </label>
+      <section class="contacts home__contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title section-title">
+            Контакты
+          </h2>
+          <div class="contacts__wrapper">
+            <div class="contacts__items">
+              <div class="contacts-item">
+                <div class="contacts-item__icon">
+                  <svg class="link__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#location" />
+                  </svg>
+                </div>
+                <div class="contacts-item__content">
+                  <h4 class="contacts-item__title">Томск, Белая 8</h4>
+                  <p class="contacts-item__info">2 этаж</p>
+                  <p class="contacts-item__info">оф. 207-208</p>
+                </div>
               </div>
-            </div>
-            <div class="form_group1">
-              <div class="form__field field">
-                <h6 class="field__title">Планируемое количество посетителей:</h6>
-                <select name="amount" class="field__select">
-                  <option value="20" class="select__text">до 20 человек</option>
-                  <option value="100">от 20 до 100 человек</option>
-                  <option value="500">от 100 до 500 человек</option>
-                  <option value="more">более 500 человек</option>
-                </select>
+              <div class="contacts-item">
+                <div class="contacts-item__icon">
+                  <svg class="link__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#home" />
+                  </svg>
+                </div>
+                <div class="contacts-item__content">
+                  <h4 class="contacts-item__title">Отдел аренды</h4>
+                  <a href="tel:74993500730" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
+                </div>
               </div>
-              <div class="form__field field">
-                <h6 class="field__title">Дата проведения:</h6>
-                <div class="field__inputs">
-                  <input type="text" name="day" maxlength="2" class="field__text field__text--w55" placeholder="ДД" />
-                  <input type="text" name="month" maxlength="2" class="field__text field__text--w55" placeholder="ММ" />
-                  <input type="text" name="year" maxlength="4" class="field__text field__text--w110" placeholder="ГГГГ" />
+              <div class="contacts-item">
+                <div class="contacts-item__icon">
+                  <svg class="link__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#star" />
+                  </svg>
+                </div>
+                <div class="contacts-item__content">
+                  <h4 class="contacts-item__title">Отдел мероприятий</h4>
+                  <a href="tel:74993500730" class="contacts-item__info">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form__section">
-            <h6 class="field__title">Контактные данные:</h6>
-            <div class="form__contact">
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Имя*</span>
-                <input type="text" name="first_name" class="field__text" placeholder="Имя" required />
-              </label>
-
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Фамилия*</span>
-                <input type="text" name="second_name" class="field__text" placeholder="Фамилия" required />
-              </label>
-
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Телефон*</span>
-                <input type="tel" name="phone_number" class="field__text" placeholder="+7 (___) ___ __ __" required />
-              </label>
-
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Email*</span>
-                <input type="email" name="email_address" class="field__text" placeholder="Email" required />
-              </label>
+            <div class="contacts__map">
+              <img src="assets\images\map.jpg" alt="map" class="contacts__map-img">
             </div>
           </div>
-          <label class="form__field field">
-            <span class="field_label field__label--textarea">Есть пожелания? Напишите нам:</span>
-            <textarea class="field__textarea" name="wish"></textarea>
-          </label>
-          <label CLASS="form__check check">
-            <input type="checkbox" class="check__input" name="agree" required />
-            <span class="check__mark"></span>
-            <span class="check__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
-          </label>
-          <div class="form__btns">
-            <button type="submit" class="form__btn btn">Отправить</button>
-            <button type="button" class="form__close">Закрыть</button>
-          </div>
-        </form>
-      </div>
+        </div>
+      </section>
+
+      <section class="home__doit doit">
+        <div class="doit__text">
+          <h2 class="doit__line1">Просто делайте, что нравится,</h2>
+          <h2 class="doit__line2">а мы вам поможем</h2>
+        </div>
+        <div class="doit__underline">
+          <div class="doit__underline doit__underline--1"></div>
+          <div class="doit__underline doit__underline--2"></div>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <nav class="page-footer__nav">
+        <a href="" class="page-footer__nav-link">Календарь мероприятий</a>
+        <a href="" class="page-footer__nav-link">Провести мероприятие</a>
+        <a href="" class="page-footer__nav-link">Стать арендатором</a>
+        <a href="" class="page-footer__nav-link">Наши проекты</a>
+        <a href="" class="page-footer__nav-link">Контакты</a>
+      </nav>
+      <form action="" class="page-footer__form subscribe">
+        <h3 class="subscribe__title">Подпишись и будь в курсе происходящего</h3>
+        <div class="subscribe__wrapper">
+          <input type="email" name="email" class="subscribe__input" placeholder="Email" required />
+          <b type="submit" class="subscribe__submit">Подписаться</b>
+        </div>
+        <label class="subscribe__check check">
+          <input type="checkbox" class="check__input" name="agree" required />
+          <span class="check__mark"></span>
+          <span class="check__label">Согласен на обработку персональных данных</span>
+        </label>
+      </form>
+
+    </div>
+    <p class="page-footer__copyright">© Millennials 2022</p>
+    <div class="page-footer__container">
+
+      <nav class="page-footer__nav-extras">
+        <a href="" class="page-footer__nav-link">Политика конфидециальности</a>
+        <a href="" class="page-footer__nav-link">Cookies</a>
+      </nav>
+      <div class="page-footer__wrapper-extras">
+
+        <div class="page-footer__contacts">
+          <span class="page-footer__social">
+            <svg class="page-footer__social-svg" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#insta" />
+            </svg>
+          </span>
+          <span class="page-footer__social">
+            <svg class="page-footer__social-svg" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk" />
+            </svg>
+          </span>
+        </div>
+
+      </div>
+      <span class="page-footer__credits">
+        <p class="page-footer__credits-label">Создание и продвижение</p>
+        <svg class="page-footer__credits-svg" width="56" height="17">
+          <use xlink:href="assets/icons/symbols.svg#tagree" />
+        </svg>
+      </span>
+    </div>
+  </footer>
+
+  @include('blocks/event-pp.html')
 </body>
 
 </html>

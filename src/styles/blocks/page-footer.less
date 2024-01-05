@@ -1,0 +1,124 @@
+.page-footer {
+    .container();
+    box-sizing: border-box;
+    padding: 0 0 75px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        position: relative;
+        padding-left: 26px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: @red;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -22px;
+    }
+
+    &__copyright {
+        margin: 0;
+        color: @black;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__wrapper-extras {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__nav-extras {
+        display: flex;
+        gap: 60px;
+        align-items: flex-end;
+    }
+
+    &__contacts {
+        display: flex;
+        justify-content: center;
+        gap: 78px;
+    }
+
+    &__social {
+        position: relative;
+        color: @white;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background-color: @black;
+
+        transition: background-color 0.2s;
+        &:hover {
+            @media (hover:hover) {
+                background-color: @red_dark;
+            }
+        }
+    }
+
+    &__social-svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__nav-link {
+        //display: block;
+        text-decoration: none;
+        color: @black;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: color 0.2s;
+
+        &:hover {
+            @media (hover:hover) {
+                color: @red;
+            }
+        }
+    }
+
+    &__credits {
+        display: flex;
+        align-items: flex-end;
+        gap: 15px;
+        margin-left: 6.5%;
+    }
+
+    &__credits-label {
+        color: @black;
+        text-align: right;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+    }
+}

@@ -19,24 +19,34 @@
 					для людей, горящих сердец и делом
 					место для настоящего
 				</p>
-
 			</header>
 
 			<section class="offers home__offers"></section>
-			<section class="about home__about"></section>
+
+			@@include("blocks/about.html", {class:'home__about'})
+
 			<section class="upcoming home__upcoming"></section>
 
 			@@include('blocks/blog-listing.html', {"class": "home__listing"})
             
-			<section class="contacts home__contacts"></section>
+			@@include('blocks/contacts.html', {"class": "home__contacts"})
 
-			<div class="doit home__doit"></div>
+			<section class="home__doit doit">
+				<div class="doit__text">
+					<h2 class="doit__line1">Просто делайте, что нравится,</h2>
+					<h2 class="doit__line2">а мы вам поможем</h2>
+				</div>
+				<div class="doit__underline">
+					<div class="doit__underline doit__underline--1"></div>
+					<div class="doit__underline doit__underline--2"></div>
+				</div>
+			</section>
 		</div>
 	</main>
 
 	@@include('blocks/page-footer.html')
 
-	@@include('blocks/event-pp.html')
+	@include('blocks/event-pp.html')
 </body>
 
 </html>

@@ -1,0 +1,36 @@
+.link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    color : @black;
+    transition: color 0.2s;
+    align-items: center;
+    height: 0;
+
+    &:hover {
+        @media (hover:hover) {
+            color: @red;
+        } 
+    }
+
+    &:active {
+        @media (hover:hover) {
+            color: @red;
+        } 
+    }
+
+    &__text,
+    &__arrow {
+        cursor: pointer;
+
+        
+    }
+
+    &__text {
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}

@@ -1,0 +1,128 @@
+.about {
+    padding-bottom: 90px;
+    &__container {
+        .container();
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        &--3 {
+            flex-direction: initial;
+            justify-content: space-between;
+            gap: 60px;
+            align-items: flex-end;
+        }
+    }
+
+    &__title {
+        margin-bottom: 50px;
+
+        color: @black;
+
+        font-family: Open Sans;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        &--2 {
+            margin-top: -120px;
+
+            max-width: 868px;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin: 0 0 100px;
+        max-width:867px;
+        align-self: flex-end;
+
+        color: @black;
+
+        font-family: Open Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &--extra {
+            margin-bottom: 90px;
+
+        }
+    }
+
+    &__picture {
+        position: relative;
+        display: block;
+        width: 65%;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 66.322%;
+        }
+    }
+
+    &__picture2 {
+        margin-top: -280px;
+        align-self: flex-end;
+        position: relative;
+        display: block;
+        max-width: 404px;
+        width: 30.3%;
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 122%;
+        }
+    }
+
+    &__picture3 {
+        max-width: 930px;
+        width: 100%;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        padding: 18px 9px 0 49px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 65%;
+            background-color: @red;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 40%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    &__img2 {
+        position: absolute;
+        top: 18px;
+        left: 49px;
+        right: 9px;
+        bottom: 0;
+        object-fit: contain;
+        width: calc(100% - 58px);
+    }
+
+    &__link {
+        max-width: 344px;
+        width: 100%;
+    }
+}
