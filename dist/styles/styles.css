@@ -386,12 +386,18 @@ textarea:focus::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .listing__article-list {
   width: 100%;
+}
+.listing__article-list::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 1px;
+  background-color: #1f1e1e;
 }
 .listing__title {
   margin: 150px 0 150px;
@@ -409,18 +415,21 @@ textarea:focus::placeholder {
   margin: 0 30px 120px;
 }
 .listing__link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 15px 0px 15px 40px;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   gap: 10px;
   text-decoration: none;
+  color: #1f1e1e;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 .events {
   padding-top: 140px 0 100px;
@@ -507,23 +516,22 @@ textarea:focus::placeholder {
   display: flex;
   width: 100%;
   margin-bottom: 60px;
+  position: relative;
 }
 .article-card + .article-card {
   margin-top: 120px;
 }
 .article-card + .article-card::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
-  margin: 0 auto 60px;
-  bottom: 100%;
-  left: 0;
-  right: 0;
   width: 100%;
   max-width: 1254px;
   height: 1px;
   background-color: #1f1e1e;
   pointer-events: none;
+  top: -60px;
+  left: 0;
 }
 .article-card__link {
   -ms-flex-negative: 0;
@@ -1311,6 +1319,17 @@ textarea:focus::placeholder {
       -ms-flex-align: end;
           align-items: flex-end;
 }
+.about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 344px;
+  margin-bottom: 30px;
+}
 .about__title {
   margin-bottom: 50px;
   color: #1f1e1e;
@@ -1411,6 +1430,9 @@ textarea:focus::placeholder {
 .about__link {
   max-width: 344px;
   width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .contacts {
   -webkit-box-sizing: border-box;
