@@ -1,7 +1,11 @@
 .listing {
     .container();
-    display: flex;
-    flex-direction: column;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     &__article-list {
         width: 100%;
@@ -35,6 +39,7 @@
         display: flex;
         padding: 15px 0px 15px 40px;
         justify-content: right;
+        align-items: flex-end;
         gap: 10px;
         text-decoration: none;
         color: @black;
@@ -43,7 +48,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-            }
+    }
 
     
 }
