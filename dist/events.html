@@ -30,6 +30,12 @@
 
   <main class="main">
     <div class="events">
+      <section class="events__navigation navigation">
+        <li>
+          <a href="index.html" class="navigation__link">Главная</a>
+          <a href="#" class="navigation__link">Мероприятия</a>
+        </li>
+      </section>
       <section class="listing events__listing">
         <h2 class="listing__title section-title">мероприятия</h2>
         <div class="listing__events-list">
@@ -95,11 +101,232 @@
             </a>
           </article>
         </div>
+        <a href="" class="listing__more link">
+          <span class="listing__text">Показать еще</span>
+          <span>
+            <svg class="listing__icon" width="91" height="60">
+              <use xlink:href="assets/icons/symbols.svg#link"></use>
+            </svg>
+          </span>
+        </a>
+      </section>
+      <section class="events__offers offers">
+        <div class="offers__wrapper">
+          <h2 class="offers__title section-title">дополнительные услуги</h2>
+          <p class="offers__text">
+            Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.
+          </p>
+          <table class="events__tariffs-table  table">
+            <thead class="table__head">
+              <tr class="table__head-tr">
+                <th class="table__th"></th>
+                <th class="table__th">Тариф «Light»</th>
+                <th class="table__th">Тариф «Promo»</th>
+                <th class="table__th">Тариф «All stars»</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr class="table__tr">
+                <th class="table__body-th">Стоимость за час</th>
+                <td class="table__td">1 000 ₽</td>
+                <td class="table__td">3 000 ₽</td>
+                <td class="table__td">3 000 ₽</td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Ведущий мероприятия</th>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Фотосъемка</th>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Видеосъемка</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Организация питания</th>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Декор</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Звуковое сопровождение</th>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+              <tr class="table__tr">
+                <th class="table__body-th">Дополнительное освещение</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+
+              <tr class="table__tr">
+                <th class="table__body-th">Клининг</th>
+                <td class="table__td"></td>
+                <td class="table__td"></td>
+                <td class="table__td">
+                  <span class="ok"></span>
+                </td>
+              </tr>
+            </tbody>
+
+            <tfoot class="table__footer">
+              <tr class="table__footer-tr">
+                <th class="table__footer-th"></th>
+                <th class="table__footer-th">Тариф «Light»</th>
+                <th class="table__footer-th">Тариф «Promo»</th>
+                <th class="table__footer-th">Тариф «All stars»</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+      <section class="partner home__partner">
+        <h2 class="partner__title">
+          Я хочу:
+        </h2>
+        <div class="partner__choice">
+          <button class="partner__event btn">Провести мероприятие</button>
+          <button class="partner__rent btn">Стать арендатором</button>
+
+        </div>
+      </section>
+
+      <section class="events__contacts">
+        <div class="contacts-item contacts-item--vert">
+          <div class="contacts-item__icon">
+            <svg class="link__icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#information" />
+            </svg>
+          </div>
+          <div class="contacts-item__content">
+            <h4 class="contacts-item__title">Цены</h4>
+            <p class="contacts-item__info">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+          </div>
+        </div>
+        <div class="contacts-item contacts-item--vert">
+          <div class="contacts-item__icon">
+            <svg class="link__icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#contact" />
+            </svg>
+          </div>
+          <div class="contacts-item__content">
+            <h4 class="contacts-item__title">Контакты</h4>
+            <p class="contacts-item__info">Отдел организации мероприятий</p>
+            <a href="tel:74993500730" class="contacts-item__info">+7 499 350 0730</a>
+            <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
+          </div>
+        </div>
+        <div class="contacts-item contacts-item--vert">
+          <div class="contacts-item__icon">
+            <svg class="link__icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#handshake" />
+            </svg>
+          </div>
+          <div class="contacts-item__content">
+            <h4 class="contacts-item__title">Преимущество</h4>
+            <p class="contacts-item__info">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</p>
+          </div>
+        </div>
       </section>
     </div>
   </main>
+  <footer class="page-footer">
+    <div class="page-footer__underline">
+      <div class="page-footer__underline page-footer__underline--1"></div>
+      <div class="page-footer__underline page-footer__underline--2"></div>
+    </div>
+    <div class="page-footer__wrapper">
+      <nav class="page-footer__nav">
+        <a href="" class="page-footer__nav-link">Календарь мероприятий</a>
+        <a href="" class="page-footer__nav-link">Провести мероприятие</a>
+        <a href="" class="page-footer__nav-link">Стать арендатором</a>
+        <a href="" class="page-footer__nav-link">Наши проекты</a>
+        <a href="" class="page-footer__nav-link">Контакты</a>
+      </nav>
+      <form action="" class="page-footer__form subscribe">
+        <h3 class="subscribe__title">Подпишись и будь в курсе происходящего</h3>
+        <div class="subscribe__wrapper">
+          <input type="email" name="email" class="subscribe__input" placeholder="Email" required />
+          <b type="submit" class="subscribe__submit">Подписаться</b>
+        </div>
+        <label class="subscribe__check check">
+          <input type="checkbox" class="check__input" name="agree" required />
+          <span class="check__mark"></span>
+          <span class="check__label">Согласен на обработку персональных данных</span>
+        </label>
+      </form>
 
-  <footer class="page-footer"></footer>
+    </div>
+    <p class="page-footer__copyright">© Millennials 2022</p>
+    <div class="page-footer__container">
+
+      <nav class="page-footer__nav-extras">
+        <a href="" class="page-footer__nav-link">Политика конфидециальности</a>
+        <a href="" class="page-footer__nav-link">Cookies</a>
+      </nav>
+      <div class="page-footer__wrapper-extras">
+        <div class="page-footer__contacts">
+          <span class="page-footer__social">
+            <svg class="page-footer__social-svg" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#insta" />
+            </svg>
+          </span>
+          <span class="page-footer__social">
+            <svg class="page-footer__social-svg" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#vk" />
+            </svg>
+          </span>
+        </div>
+
+      </div>
+      <span class="page-footer__credits">
+        <p class="page-footer__credits-label">Создание и продвижение</p>
+        <svg class="page-footer__credits-svg" width="56" height="17">
+          <use xlink:href="assets/icons/symbols.svg#tagree" />
+        </svg>
+      </span>
+    </div>
+  </footer>
 </body>
 
 </html>

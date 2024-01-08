@@ -1,0 +1,36 @@
+.navigation {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    li {
+        float: left;
+        :not(:last-child):after {
+            content: "/";
+            margin-left: 4px;
+            color: @black;
+        }
+        
+    }
+
+    &__link {
+        text-decoration: none;
+        color: @black;
+        font-family: Open Sans;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: color 0.2s;
+        
+        &:hover {
+            @media (hover:hover) {
+                color: @red;
+            }
+        }
+        &:active {
+            color: @red;
+        }
+    }
+}

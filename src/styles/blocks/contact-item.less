@@ -2,6 +2,15 @@
     display: flex;
     gap: 54px;
     align-items: center;
+    &--vert {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    a {
+        margin: 0;
+    }
 
     &__icon {
         display: flex;
@@ -27,6 +36,8 @@
     }
 
     &__info {
+        max-width: 401px;
+        width: 100%;
         color: @black;
         font-family: Open Sans;
         font-size: 16px;

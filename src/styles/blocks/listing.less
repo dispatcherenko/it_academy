@@ -1,7 +1,9 @@
 .listing {
-    .container();
+    margin-bottom: 80px;
+    
     
     &__container {
+        .container();
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -50,5 +52,14 @@
         line-height: normal;
     }
 
-    
+    &__more {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+    }
+
+    &__icon {
+        transform: rotate(90deg);
+    }
 }

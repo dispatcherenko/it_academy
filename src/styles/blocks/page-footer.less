@@ -121,4 +121,28 @@
         line-height: normal;
         margin: 0;
     }
+
+    &__underline {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 98px;
+
+        &--1,
+        &--2 {
+            flex-grow: 1;
+            height: 2px;
+            width: 100%;
+        }
+
+        &--1 {
+            margin-left: 50px;
+            background: var(--1-liner, linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%));
+        }
+        
+        &--2 {
+            margin-right: 50px;
+            background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
+    }
 }
