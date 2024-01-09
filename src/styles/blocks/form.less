@@ -34,6 +34,7 @@
   &__btn {
     max-width: 400px;
     width: 100%;
+    margin-top: 40px;
   }
 
   &__close {
@@ -210,8 +211,26 @@
   box-sizing: border-box;
   position: relative;
   padding-left: 40px;
-  margin-bottom: 40px;
-  
+
+  &--red {
+    color: @red;
+    .check__mark {
+      border-color: @red;
+    }
+    .check__input {
+      &:checked {
+        & ~ .check__mark {
+          background-color: @red;
+        }
+      }
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
   &__input {
     .is-hidden();
 
@@ -255,5 +274,4 @@
     font-weight: 400;
     line-height: normal;
   }
-
 }

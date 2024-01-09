@@ -1,17 +1,9 @@
-.navigation {
+.breadcrumbs {
+    .container();
     margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
 
-    li {
-        float: left;
-        :not(:last-child):after {
-            content: "/";
-            margin-left: 4px;
-            color: @black;
-        }
-        
+    @media @bw768 {
+        display: none;
     }
 
     &__link {
