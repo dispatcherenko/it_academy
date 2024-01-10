@@ -1,7 +1,116 @@
 .event {
-    margin-top: 80px;
+    padding: 40px 0 150px;
     &__container {
         .container();
     }
+
+    &__header {
+        .container();
+        margin-bottom: 80px;
+    }
+
+    &__content {
+        max-width: 830px;
+        margin-bottom: 80px;
+    }
     
+    &__title {
+        margin: 0 0 80px;
+    }
+
+    &__about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media @bw768 {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__info {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        position: relative;
+        padding: 13px 60px 13px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        text-transform: uppercase;
+        gap: 9px;
+
+        color: @black;
+        text-align: right;
+        font-family: @font3;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            max-width: 140px;
+            height: 1px;
+            background: linear-gradient(
+                270deg, 
+                #1C1B1B 0%, 
+                rgba(255, 255, 255, 0.00) 
+                82.86%);
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        &:last-child {
+            align-items: flex-start;
+            text-align: left;
+            &::before,
+            &::after {
+                background: linear-gradient(
+                90deg, 
+                #1C1B1B 0%, 
+                rgba(255, 255, 255, 0.00) 
+                82.86%);
+            }
+        }
+    }
+
+    &__time {
+        font-size: 30px;
+        line-height: 36px;
+        &::after {
+            content: attr(data-caption);
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__info-text {
+        line-height: 19px;
+        font-weight: 700;
+    }
+
+    &__picture {
+        display: block;
+        max-width: 487px;
+        width: 100%;
+        margin: 0 50px;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+    }
 }

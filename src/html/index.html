@@ -13,7 +13,6 @@
 				<h1 class="main-header__title">Арт — пространство</h1>
 				<picture class="main-header__picture">
 					<img src="assets/images/LENNI.svg" class="main-header__img" alt="img__main">
-
 				</picture>
 				<p class="main-header__text">
 					для людей, горящих сердец и делом
@@ -25,7 +24,7 @@
 
 			@@include("blocks/about.html", {class:'home__about'})
 
-			<section class="upcoming home__upcoming"></section>
+			@@include("blocks/upcoming.html", {class:'home__upcoming'})
 
 			@@include('blocks/blog-listing.html', {"class": "home__listing"})
             
@@ -42,7 +41,7 @@
 
 	@@include('blocks/page-footer.html')
 
-	@@include('blocks/event-pp.html')
+	@include('blocks/event-pp.html')
 </body>
 
 </html>

@@ -4,6 +4,7 @@
 <head>
   <title>Lenni Art</title>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,7 +35,6 @@
         <h1 class="main-header__title">Арт — пространство</h1>
         <picture class="main-header__picture">
           <img src="assets/images/LENNI.svg" class="main-header__img" alt="img__main">
-
         </picture>
         <p class="main-header__text">
           для людей, горящих сердец и делом
@@ -47,7 +47,7 @@
           Я хочу:
         </h2>
         <div class="partner__choice">
-          <button class="partner__event btn">Провести мероприятие</button>
+          <button class="partner__event btn btn--red">Провести мероприятие</button>
           <button class="partner__rent btn">Стать арендатором</button>
 
         </div>
@@ -102,7 +102,79 @@
         </div>
       </section>
 
-      <section class="upcoming home__upcoming"></section>
+      <section class="upcoming home__upcoming">
+        <div class="upcoming__top-border"></div>
+        <div class="upcoming__container">
+          <div class="upcoming__wrapper">
+            <h2 class="upcoming__title section-title">МЕРОПРИЯТИЯ</h2>
+            <div class="upcoming__list">
+              <article class="event-card  upcoming__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                  <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                  <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                </a>
+              </article>
+              <article class="event-card  upcoming__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                  <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                  <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+                </a>
+              </article>
+              <article class="event-card  upcoming__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <img src="assets/images/events/Sade.jpg" alt="stuff" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                  <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                  <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                </a>
+              </article>
+            </div>
+            <div class="upcoming__slider">
+              <span>
+                <svg class="upcoming__arrow upcoming__arrow--rev" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </span>
+
+              <div class="upcoming__pages">
+                <svg class="upcoming__page" width="15" height="2">
+                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                </svg>
+                <svg class="upcoming__page" width="15" height="2">
+                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                </svg>
+                <svg class="upcoming__page" width="15" height="2">
+                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                </svg>
+                <svg class="upcoming__page" width="15" height="2">
+                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                </svg>
+                <svg class="upcoming__page" width="15" height="2">
+                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                </svg>
+              </div>
+
+              <span>
+                <svg class="upcoming__arrow" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <a href="#" class="upcoming__link link">Смотреть все</a>
+        </div>
+        <div class="upcoming__bottom-border"></div>
+      </section>
 
       <section class="listing home__listing">
         <div class="listing__container">
@@ -291,108 +363,7 @@
     </div>
   </footer>
 
-  <div class="pp" id="eventPP">
-    <div class="pp__wrapper">
-      <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
-          <svg class="x-btn__icon">
-            <use xlink:href="assets/icons/symbols.svg#x"></use>
-          </svg>
-        </button>
-      </div>
-      <div class="pp__container">
-        <h2 class="pp__title">Заполните форму
-          <br />
-          и мы подберем площадку
-        </h2>
-        <form class="pp__form form">
-          <div class="form__list">
-            <div class="form__field field">
-              <h6 class="field__title">Формат мероприятия:</h6>
-              <div class="field__radio radio">
-                <label class="radio__label">
-                  <input type="radio" name="format" value="seminar" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Мастер-класс/семинар</span>
-                </label>
-                <label class="radio__label">
-                  <input type="radio" name="format" value="concert" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Концерт/выступление</span>
-                </label>
-                <label class="radio__label">
-                  <input type="radio" name="format" value="exhib" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Выставка/показ</span>
-                </label>
-                <label class="radio__label">
-                  <input type="radio" name="format" value="else" class="radio__input" />
-                  <span class="radio__mark"></span>
-                  <span class="radio__name">Другое</span>
-                </label>
-              </div>
-            </div>
-            <div class="form_group1">
-              <div class="form__field field">
-                <h6 class="field__title">Планируемое количество посетителей:</h6>
-                <select name="amount" class="field__select">
-                  <option value="20" class="select__text">до 20 человек</option>
-                  <option value="100">от 20 до 100 человек</option>
-                  <option value="500">от 100 до 500 человек</option>
-                  <option value="more">более 500 человек</option>
-                </select>
-              </div>
-              <div class="form__field field">
-                <h6 class="field__title">Дата проведения:</h6>
-                <div class="field__inputs">
-                  <input type="text" name="day" maxlength="2" class="field__text field__text--w55" placeholder="ДД" />
-                  <input type="text" name="month" maxlength="2" class="field__text field__text--w55" placeholder="ММ" />
-                  <input type="text" name="year" maxlength="4" class="field__text field__text--w110" placeholder="ГГГГ" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form__section">
-            <h6 class="field__title">Контактные данные:</h6>
-            <div class="form__contact">
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Имя*</span>
-                <input type="text" name="first_name" class="field__text" placeholder="Имя" required />
-              </label>
-
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Фамилия*</span>
-                <input type="text" name="second_name" class="field__text" placeholder="Фамилия" required />
-              </label>
-
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Телефон*</span>
-                <input type="tel" name="phone_number" class="field__text" placeholder="+7 (___) ___ __ __" required />
-              </label>
-
-              <label class="form__field form__field--w50 field">
-                <span class="field__label">Email*</span>
-                <input type="email" name="email_address" class="field__text" placeholder="Email" required />
-              </label>
-            </div>
-          </div>
-          <label class="form__field field">
-            <span class="field_label field__label--textarea">Есть пожелания? Напишите нам:</span>
-            <textarea class="field__textarea" name="wish"></textarea>
-          </label>
-          <label CLASS="form__check check">
-            <input type="checkbox" class="check__input" name="agree" required />
-            <span class="check__mark"></span>
-            <span class="check__label">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</span>
-          </label>
-          <div class="form__btns">
-            <button type="submit" class="form__btn btn">Отправить</button>
-            <button type="button" class="form__close">Закрыть</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  @include('blocks/event-pp.html')
 </body>
 
 </html>

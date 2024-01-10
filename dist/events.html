@@ -5,6 +5,7 @@
 <head>
   <title>Lenni Art</title>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,13 +30,12 @@
   </header>
 
   <main class="main">
+    <div class="breadcrumbs">
+      <a href="#" class="breadcrumbs__link link">Главная</a>
+      <a href="#" class="breadcrumbs__link link">Раздел</a>
+      <a href="#" class="breadcrumbs__link link">Страница раздела</a>
+    </div>
     <div class="events">
-      <section class="events__navigation navigation">
-        <li>
-          <a href="index.html" class="navigation__link">Главная</a>
-          <a href="#" class="navigation__link">Мероприятия</a>
-        </li>
-      </section>
       <section class="listing events__listing">
         <h2 class="listing__title section-title">мероприятия</h2>
         <div class="listing__events-list">
@@ -225,7 +225,7 @@
           Я хочу:
         </h2>
         <div class="partner__choice">
-          <button class="partner__event btn">Провести мероприятие</button>
+          <button class="partner__event btn btn--red">Провести мероприятие</button>
           <button class="partner__rent btn">Стать арендатором</button>
 
         </div>

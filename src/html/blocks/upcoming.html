@@ -1,0 +1,72 @@
+<section class="upcoming @@class"> 
+    <div class="upcoming__top-border"></div>
+    <div class="upcoming__container">
+        <div class="upcoming__wrapper">
+            <h2 class="upcoming__title section-title">МЕРОПРИЯТИЯ</h2>
+            <div class="upcoming__list">
+                @@loop('event-card.html', [
+                        {
+                            "class": "upcoming__event-card",
+                            "img": "assets/images/events/Nirvana.jpg",
+                            "alt": "nirvana",
+                            "title": "Собираемся и слушаем альбом Nirvana",
+                            "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                            "time": "07.12.2022 | начало 18.00",
+                            "datetime": "2022-12-07T18:00"
+                        },
+                        {
+                            "class": "upcoming__event-card",
+                            "img": "assets/images/events/stuff.jpg",
+                            "alt": "stuff",
+                            "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                            "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+                            "time": "14.12.2022 | начало 18.30",
+                            "datetime": "2022-12-14T18:30"
+                        },
+                        {
+                            "class": "upcoming__event-card",
+                            "img": "assets/images/events/Sade.jpg",
+                            "alt": "stuff",
+                            "title": "Вечер | The Best of Sade",
+                            "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                            "time": "16.12.2022 | начало 20.00",
+                            "datetime": "2022-12-16T20:00"
+                        },
+                        ])
+            </div>
+            <div class="upcoming__slider">
+                    <span>
+                        <svg class="upcoming__arrow upcoming__arrow--rev" width="92" height="62">
+                            <use xlink:href="assets/icons/symbols.svg#link"></use>
+                          </svg>
+                    </span>
+
+                    <div class="upcoming__pages">
+                        <svg class="upcoming__page" width="15" height="2">
+                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                        </svg>
+                        <svg class="upcoming__page" width="15" height="2">
+                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                        </svg>
+                        <svg class="upcoming__page" width="15" height="2">
+                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                        </svg>
+                        <svg class="upcoming__page" width="15" height="2">
+                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                        </svg>
+                        <svg class="upcoming__page" width="15" height="2">
+                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
+                        </svg>
+                    </div>
+
+                    <span>
+                        <svg class="upcoming__arrow" width="92" height="62">
+                            <use xlink:href="assets/icons/symbols.svg#link"></use>
+                        </svg>
+                    </span>
+            </div>
+        </div>
+        <a href="#" class="upcoming__link link">Смотреть все</a>
+    </div>
+    <div class="upcoming__bottom-border"></div>
+</section>

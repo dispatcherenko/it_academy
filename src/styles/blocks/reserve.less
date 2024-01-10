@@ -5,10 +5,78 @@
     grid-template-areas: 
         "checks scheme"
         "order legend";
-    width: 100%;    
+    width: 100%; 
+
+    &__checks {
+      grid-area: checks;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__order {
+      grid-area: order;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__scheme {
+      grid-area: scheme;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    &__legend {
+      grid-area: legend;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    &__section-title {
+      color: @black;
+      /* Desk. Типографика Cайт 1/Подзаголовок/4 Подзаголовок */
+      font-family: Open Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 20px;
+
+      &--mb30 {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__scheme-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6px 56px;
+      background-color: @black;
+      color: @white;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+    }
+    
+    &__scheme-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 780px;
+      width: 100%;
+    }
 
     &__check {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &__scheme-wrapper {
@@ -60,5 +128,136 @@
           margin-left: 4px;
           font-size: 0.95em;
         }
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+
+    &__price-item {
+      position: relative;
+      min-height: 24px;
+      margin-bottom: 15px;
+      padding-left: 34px;
+      padding-top: 2px;
+      color: @black;
+      text-align: right;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        background-color: @black;
+      }
+      
+      &--red {
+        &::before {
+          background-color: @red;
+        }
+      }
+      
+      &::after {
+        content: attr(data-caption);
+        margin-left: 4px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__notation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__note {
+      position: relative;
+      min-height: 24px;
+      margin-bottom: 15px;
+      padding-left: 54px;
+      padding-top: 2px;
+      color: @black;
+      text-align: right;
+      font-family: Open Sans;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      
+      &--free {
+        &::before,
+        &::after {
+          content: '';
+          box-sizing: border-box;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 24px;
+          height: 24px;
+          border: 1px solid @black;
+          border-radius: 50%;
+        }
+        &::after {
+          border-color: @red;
+          left: 12px;
+        }
+      }
+
+      &--booked {
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 5px;
+          top: 0;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: @gray-dark;
+        }
+      }
+    }
+
+    &__tickets {
+      margin-bottom: 18px;
+      color: @black;
+      font-family: Open Sans;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &__sum {
+      font-weight: 600;
+    }
+
+    &__total {
+      margin: 26px 0 50px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      color: @black;
+      text-align: right;
+      font-family: Open Sans;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
     }
 }

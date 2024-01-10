@@ -1,12 +1,14 @@
 .breadcrumbs {
     .container();
     margin-top: 40px;
+    display: flex;
 
     @media @bw768 {
         display: none;
     }
 
     &__link {
+        display: inline;
         text-decoration: none;
         color: @black;
         font-family: Open Sans;
@@ -15,6 +17,23 @@
         font-weight: 400;
         line-height: normal;
         transition: color 0.2s;
+        margin-right: 16px;
+
+        &::after {
+            content:'/';
+            position: relative;
+            left: 4px;
+            display: inline-block;
+            width: 0;
+            pointer-events: none;
+            color: @black;
+        }
+        &:last-child {
+            margin-right: 0;
+            &::after {
+                display: none;
+            }
+        }
         
         &:hover {
             @media (hover:hover) {
