@@ -26,6 +26,13 @@ body {
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+          
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+  @media @bw768 {
+    padding-top: 70px;
+  }
 }
 
 .main {
@@ -75,7 +82,7 @@ textarea:focus {
 }
 
 .home {
-              
+  margin-top: 100px;   
   &__listing {
     margin-bottom: 95px;
   }

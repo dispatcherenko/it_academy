@@ -3,9 +3,29 @@
     gap: 65px 11%;
     grid-template-columns: 405px calc(89% - 405px);
     grid-template-areas: 
-        "checks scheme"
-        "order legend";
-    width: 100%; 
+      "checks scheme"
+      "order legend"; 
+    width: 100%;
+
+    @media @bw1340 {
+      gap: 65px 6.5%;
+      grid-template-columns: 340px calc(93.5% - 340px);
+    }
+    @media @bw1020 {
+      gap: 60px;
+      grid-template-areas: 
+        "scheme scheme"
+        "checks legend"
+        "checks order"; 
+    }
+    @media @bw768 {
+      grid-template-columns: 100%;
+      grid-template-areas: 
+        "scheme"
+        "legend"
+        "checks"
+        "order"; 
+    }
 
     &__checks {
       grid-area: checks;
@@ -33,6 +53,11 @@
       flex-direction: column;
       align-items: flex-end;
       text-align: right;
+
+      @media @bw768 {
+        align-items: flex-start;
+        text-align: left;
+      }
     }
 
     &__section-title {
@@ -70,6 +95,14 @@
       align-items: center;
       min-width: 780px;
       width: 100%;
+
+      @media @bw1020 {
+        min-width: 590px;
+      }
+
+      @media @bw768 {
+        min-width: 263px;
+      }
     }
 
     &__check {
@@ -135,6 +168,11 @@
       flex-direction: column;
       align-items: flex-end;
       margin-bottom: 40px;
+
+      @media @bw768 {
+        align-items: flex-start;
+        text-align: left;
+      }
     }
 
     &__price-item {
@@ -182,6 +220,11 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      @media @bw768 {
+        align-items: flex-start;
+        text-align: left;
+      }
     }
 
     &__note {
