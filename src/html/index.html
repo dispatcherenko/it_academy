@@ -14,10 +14,8 @@
 				<picture class="main-header__picture">
 					<img src="assets/images/LENNI.svg" class="main-header__img" alt="img__main">
 				</picture>
-				<p class="main-header__text">
-					для людей, горящих сердец и делом
-					место для настоящего
-				</p>
+				<p class="main-header__text">для людей, горящих сердец и делом</p>
+				<p class="main-header__text">место для настоящего</p>
 			</header>
 
 			@@include("blocks/partner.html", {class:'home__partner'})
@@ -32,7 +30,10 @@
 
 			<section class="home__doit doit">
 				<div class="doit__text">
-					<h2 class="doit__line1">Просто делайте, что нравится,</h2>
+					<div class="doit__line-wrapper">
+						<h2 class="doit__line1 doit__line1--1">Просто делайте, </h2>
+						<h2 class="doit__line1 doit__line1--2">что нравится,</h2>
+					</div>
 					<h2 class="doit__line2">а мы вам поможем</h2>
 				</div>
 			</section>

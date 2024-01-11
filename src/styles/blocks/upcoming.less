@@ -1,6 +1,15 @@
 .upcoming {
     margin: 210px 0 150px;
     position: relative;
+    @media @bw1340 {
+        margin: 200px 0 150px;
+    }
+    @media @bw768 {
+        margin: 130px 0 150px;
+    }
+    @media @bw320 {
+        margin: 100px 0 150px;
+    }
 
     &::before {
         content: "";
@@ -11,7 +20,19 @@
         left: -20px; 
         background-color: @white-60; 
         z-index: -1;
+
+        @media @bw1340 {
+            top: -80px; 
+        }
+        @media @bw768 {
+            top: -60px; 
+        }
+        @media @bw320 {
+            top:-20px;
+        }
     }
+
+    
 
     &__top-border {
         position: relative;
@@ -24,6 +45,16 @@
             width: 0;
             height: 0;
             top: -130px;
+
+            @media @bw1340 {
+                top: -110px; 
+            }
+            @media @bw768 {
+                top: -90px; 
+            }
+            @media @bw320 {
+                top:-50px;
+            }
         }
 
         &::before {
@@ -81,11 +112,29 @@
 
     &__list {
         display: flex;
+
+        @media @bw768 {
+            width: 950px;
+            align-self: flex-start;
+        }
+
+        @media @bw320 {
+            align-self: flex-start; 
+            width: 340%;
+        }
+        
     }
 
     &__event-card {
         width: calc(33.3333% - 60px);
-        margin: 0 30px 100px;
+        margin: 0 30px 70px;
+
+        @media @bw768 {
+            margin: 0 15px 70px;
+        }
+        @media @bw320 {
+            margin: 0 15px 60px;
+        }
     }
 
     &__slider {
@@ -101,6 +150,12 @@
         height: 60px;
         cursor: pointer;
         transition: color 0.2s;
+        padding-top: 5px;
+
+        @media @bw768 {
+            max-height: 40px;
+        }
+
         &:hover {
             @media (hover:hover) {
                 color: @red;
@@ -114,6 +169,7 @@
         }
         &--rev {
             transform: rotate(180deg);
+            padding: 0 0 5px;
         }
     }
 
@@ -124,6 +180,10 @@
         justify-content: space-between  ;
         align-items: center;
         gap: 2px;
+
+        @media @bw768 {
+            max-width: 60px;
+        }
     }
 
     &__page {

@@ -1,6 +1,13 @@
 .doit {
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 60px;
+
+    @media @bw1660 {
+        margin-top: 130px;
+    }
+    @media @bw1340 {
+        margin-top: 100px;
+    }
 
     &__text {
         position: relative;
@@ -10,24 +17,57 @@
 		width: 100%;
     }
 
+    &__line-wrapper {
+        display: flex;
+        @media @bw1340 {
+            flex-direction: column;
+        }
+    }
+
     &__line1,
     &__line2 {
-        margin: 0;
+        margin: 0 40px 0 0;
         white-space: nowrap;
         color: @black;
         font-family: Mak;
-        font-size: 128px;
+        font-size: 6.66666vw;
         font-style: normal;
         font-weight: 700;
         line-height: 120%; /* 153.6px */
+        @media @bw1340 {
+            font-size: 10.41667vw;
+        }
+        @media @bw768 {
+            font-size: 12.5vw;
+        }
     }
 
     &__line1 {
-        margin-left: -55px;
+        margin-left: -40px;
+        @media @bw768 {
+            margin-left: -20px;
+        }
+        &--2 {
+            @media @bw1340 {
+                align-self: flex-end;
+                margin-right: -125px;
+            }
+            @media @bw768 {
+                margin-right: -70px;
+            }
+        }
     }
 
     &__line2 {
         text-align: right;
         margin-right: -180px;
+        @media @bw1340 {
+            margin-right: -120px;
+        }
+        @media @bw768 {
+            margin-right: 0;
+            margin-left: -55px;
+        }
+
     }
 }

@@ -1,5 +1,11 @@
 .about {
     margin-top: 200px;
+    @media @bw768 {
+        margin-top: 130px;
+    }
+    @media @bw320 {
+        margin-top: 100px;
+    }
     &__container {
         .container();
     }
@@ -7,11 +13,34 @@
     &__block {
         display: flex;
         flex-direction: column;
+        &--2 {
+            @media @bw1150 {
+                margin: 50px 0 50px;
+                display: grid;
+                grid-template-columns: calc(100% - 37%) 37%;
+                grid-template-rows: 43% auto;
+                grid-template-areas: 
+                "title picture"
+                "text picture";
+            }
+            @media @bw768 {
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                grid-template-areas: 
+                "title"
+                "text"
+                "picture";
+            }
+        }
         &--3 {
             flex-direction: initial;
             justify-content: space-between;
             gap: 60px;
             align-items: flex-end;
+
+            @media @bw1020 {
+                flex-direction: column;
+            }
         }
     }
 
@@ -20,6 +49,21 @@
         flex-direction: column;
         max-width: 344px;
         margin-bottom: 30px;
+
+        @media @bw1020 {
+            flex-direction: row;
+            max-width: 100%;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 20px;
+        }
+        @media @bw768 {
+            flex-direction: column;
+            margin-top: 0;
+            justify-content: center;
+            align-items: center;
+        } 
     }
 
     &__title {
@@ -32,15 +76,28 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        @media @bw1340 {
+            font-size: 26px;
+        }
+        @media @bw768 {
+            font-size: 18px;
+        }
         &--2 {
+            grid-area: title;
+
             margin-top: -120px;
 
             max-width: 868px;
             width: 100%;
+            @media @bw1150 {
+                align-self: center;
+                margin: 0;
+            }
         }
     }
 
     &__text {
+        display: flex;
         margin: 0 0 100px;
         max-width:867px;
         align-self: flex-end;
@@ -52,8 +109,37 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        @media @bw1340 {
+            font-size: 16px;
+        }
+        &--grid {
+            grid-area: text;
+            @media @bw1340 {
+                margin-top: 60px;
+            }
+            @media @bw1150 {
+                margin: 0;
+                align-self: center;
+            }
+            @media @bw768 {
+                margin: 30px 0 50px;
+            }
+        }
+
         &--extra {
             margin-bottom: 90px;
+            @media @bw1020 {
+                margin-bottom: initial;
+                max-width: 310px;
+                font-size: 18px;
+                align-self: center;
+            }
+            @media @bw768 {
+                margin-bottom: 50px;
+                max-width: 280px;
+                width: 100%;
+                font-size: 16px;
+            }
         }
     }
 
@@ -67,9 +153,14 @@
             width: 100%;
             padding-top: 66.322%;
         }
+        @media @bw1150 {
+            width: 100%;
+        }
     }
 
     &__picture2 {
+        grid-area: picture;
+
         margin-top: -280px;
         align-self: flex-end;
         position: relative;
@@ -82,6 +173,16 @@
             width: 100%;
             padding-top: 122%;
         }
+        @media @bw1150 { 
+            align-self: auto;
+            margin-top: 0;
+            width: auto;
+        }
+        @media @bw768 {
+            align-self: flex-end;
+            max-width: 262px;
+        }
+
     }
 
     &__picture3 {
@@ -124,12 +225,19 @@
         right: 9px;
         bottom: 0;
         object-fit: contain;
-        width: calc(100% - 58px);
+        width: calc(100% - 59px);
+        @media @bw768 {
+            width: calc(100% - 34px);
+            left: 24px; 
+        }
     }
 
     &__link {
         max-width: 344px;
         width: 100%;
         justify-content: space-between;
+        @media @bw1020 {
+            margin-bottom: 20px;
+        }
     }
 }
