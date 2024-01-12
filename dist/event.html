@@ -62,11 +62,13 @@
             </time>
             <div class="event__info-text">Кафе «Птичка»</div>
           </div>
-          <picture class="event__picture">
-            <source media="(max-width:787px)" type="image/webp" srcset="assets\images\event\Sade_mobile.webp" />
-            <source type="image/webp" srcset="assets\images\event\Sade.webp" />
-            <img src="assets\images\events\Sade.jpg" alt="Вечер | The Best of Sade" class="event__img">
-          </picture>
+          <div class="event__picture-container">
+            <picture class="event__picture">
+              <source media="(max-width:787px)" type="image/webp" srcset="assets\images\event\Sade_mobile.webp" />
+              <source type="image/webp" srcset="assets\images\event\Sade.webp" />
+              <img src="assets\images\events\Sade.jpg" alt="Вечер | The Best of Sade" class="event__img">
+            </picture>
+          </div>
           <div class="event__info">
             <span class="event__time" data-caption="начало">20:00</span>
             <div class="event__info-text">Ленина 10 | 2 этаж</div>
@@ -265,12 +267,15 @@
       </div>
 
     </div>
-    <p class="page-footer__copyright">© Millennials 2022</p>
+
     <div class="page-footer__container">
-      <nav class="page-footer__nav-extras">
-        <a href="" class="page-footer__nav-link">Политика конфидециальности</a>
-        <a href="" class="page-footer__nav-link">Cookies</a>
-      </nav>
+      <div class="page-footer__block-1">
+        <p class="page-footer__copyright">© Millennials 2022</p>
+        <nav class="page-footer__nav-extras">
+          <a href="" class="page-footer__nav-link">Политика конфидециальности</a>
+          <a href="" class="page-footer__nav-link">Cookies</a>
+        </nav>
+      </div>
       <span class="page-footer__credits">
         <p class="page-footer__credits-label">Создание и продвижение</p>
         <svg class="page-footer__credits-svg" width="56" height="17">

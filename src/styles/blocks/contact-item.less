@@ -20,6 +20,16 @@
         flex-direction: column;
         text-align: center;
         gap: 40px;
+        @media @bw1340 {
+            max-width: 280px;
+        }
+        @media @bw768 {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+            max-width: 241px;
+        }
+
     }
     
     &__icon {
@@ -96,5 +106,26 @@
     &__content {
         display: flex;
         flex-direction: column;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 100%;
+        gap:13%;
+
+        @media (max-width: 1420px){
+        }
+        @media @bw1340 {
+            gap: 0;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        @media @bw768 {
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 }

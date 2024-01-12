@@ -239,7 +239,7 @@
           </table>
         </div>
       </section>
-      <section class="partner home__partner">
+      <section class="partner @@class">
         <h2 class="partner__title">
           Я хочу:
         </h2>
@@ -251,28 +251,30 @@
       </section>
 
       <section class="events__contacts">
-        <div class="contacts-item contacts-item--vert">
-          <div class="contacts-item__icon">
-            <svg class="link__icon" width="24" height="24">
-              <use xlink:href="assets/icons/symbols.svg#information" />
-            </svg>
+        <div class="contacts-item__row">
+          <div class="contacts-item contacts-item--vert">
+            <div class="contacts-item__icon">
+              <svg class="link__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#information" />
+              </svg>
+            </div>
+            <div class="contacts-item__content">
+              <h4 class="contacts-item__title">Цены</h4>
+              <p class="contacts-item__info">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
+            </div>
           </div>
-          <div class="contacts-item__content">
-            <h4 class="contacts-item__title">Цены</h4>
-            <p class="contacts-item__info">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</p>
-          </div>
-        </div>
-        <div class="contacts-item contacts-item--vert">
-          <div class="contacts-item__icon">
-            <svg class="link__icon" width="24" height="24">
-              <use xlink:href="assets/icons/symbols.svg#contact" />
-            </svg>
-          </div>
-          <div class="contacts-item__content">
-            <h4 class="contacts-item__title">Контакты</h4>
-            <p class="contacts-item__info">Отдел организации мероприятий</p>
-            <a href="tel:74993500730" class="contacts-item__info">+7 499 350 0730</a>
-            <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
+          <div class="contacts-item contacts-item--vert">
+            <div class="contacts-item__icon">
+              <svg class="link__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#contact" />
+              </svg>
+            </div>
+            <div class="contacts-item__content">
+              <h4 class="contacts-item__title">Контакты</h4>
+              <p class="contacts-item__info">Отдел организации мероприятий</p>
+              <a href="tel:74993500730" class="contacts-item__info">+7 499 350 0730</a>
+              <a href="mailto:hi@tagree.ru" class="contacts-item__info">hi@tagree.ru</a>
+            </div>
           </div>
         </div>
         <div class="contacts-item contacts-item--vert">
@@ -332,12 +334,15 @@
       </div>
 
     </div>
-    <p class="page-footer__copyright">© Millennials 2022</p>
+
     <div class="page-footer__container">
-      <nav class="page-footer__nav-extras">
-        <a href="" class="page-footer__nav-link">Политика конфидециальности</a>
-        <a href="" class="page-footer__nav-link">Cookies</a>
-      </nav>
+      <div class="page-footer__block-1">
+        <p class="page-footer__copyright">© Millennials 2022</p>
+        <nav class="page-footer__nav-extras">
+          <a href="" class="page-footer__nav-link">Политика конфидециальности</a>
+          <a href="" class="page-footer__nav-link">Cookies</a>
+        </nav>
+      </div>
       <span class="page-footer__credits">
         <p class="page-footer__credits-label">Создание и продвижение</p>
         <svg class="page-footer__credits-svg" width="56" height="17">
