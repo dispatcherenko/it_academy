@@ -52,21 +52,30 @@
     column-gap: 60px;
     @media @bw768 {
       flex-direction: column;
+      align-items: center;
     }
   }
 
   &__btn,
-  &__close {
+  &__close-button {
     max-width: 400px;
     width: 100%;
     margin-top: 40px;
   }
 
-  &__close {
-    cursor: pointer;
-    max-width: 400px;
+  &__close-button {
+    display: flex;
+    max-width: 401px;
     max-height: 52px;
     width: 100%;
+    margin-top: 49px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__close {
+    cursor: pointer;
+    
     color: @black;
     font-family: Open Sans;
     font-size: 16px;
@@ -80,8 +89,13 @@
     transition: text-decoration 0.2s;
     &:hover {
       @media (hover:hover) {
-        text-decoration: underline;
+        color: @red;
+        text-decoration-color: @red;
       }
+    }
+    &:active {
+      color: @red;
+      text-decoration-color: @red;
     }
   }
 }

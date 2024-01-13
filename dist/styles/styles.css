@@ -1768,16 +1768,28 @@ b {
           column-gap: 60px;
 }
 .form__btn,
-.form__close {
+.form__close-button {
   max-width: 400px;
   width: 100%;
   margin-top: 40px;
 }
-.form__close {
-  cursor: pointer;
-  max-width: 400px;
+.form__close-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 401px;
   max-height: 52px;
   width: 100%;
+  margin-top: 49px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__close {
+  cursor: pointer;
   color: #1f1e1e;
   font-family: Open Sans;
   font-size: 16px;
@@ -1792,6 +1804,10 @@ b {
   transition: -webkit-text-decoration 0.2s;
   transition: text-decoration 0.2s;
   transition: text-decoration 0.2s, -webkit-text-decoration 0.2s;
+}
+.form__close:active {
+  color: #bc3324;
+  text-decoration-color: #bc3324;
 }
 .field__radio {
   margin-bottom: 9px;
@@ -3492,6 +3508,9 @@ b {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .field__text--w110 {
     width: 100%;
@@ -3926,7 +3945,8 @@ b {
     color: #bc3324;
   }
   .form__close:hover {
-    text-decoration: underline;
+    color: #bc3324;
+    text-decoration-color: #bc3324;
   }
   .pp__x-btn:hover {
     background-color: #a51505;
