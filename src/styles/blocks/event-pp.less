@@ -9,7 +9,14 @@
     background-color: @gray;
     overflow-y: auto;
     z-index: 110;
-    //display: none;
+
+    @media @bw1340   {
+        padding: 72px 40px 50px; 
+    }
+    @media @bw768 {
+        padding: 80px 20px 50px; 
+    }
+
     @supports (backdrop-filter: blur(50px)) {
         background-color: @black-40;
         backdrop-filter: blur(50px); 
@@ -35,6 +42,18 @@
         background-repeat: repeat;
         padding-left: 170px;
         padding-right: 170px;
+        @media @bw1660 {
+            padding-left: 140px;
+            padding-right: 140px;
+        }
+        @media @bw1340 {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @media @bw768 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &__container {
@@ -76,14 +95,30 @@
                 background-color: @red_dark;
             }
         }
+        &:active {
+            background-color: @red_dark;
+        }
+
+        @media @bw1660 {
+            right: -170px;
+        }
+        @media @bw1340 {
+            right: -70px;
+        }
+        @media @bw768 {
+            right: -40px;
+            top: -20px;  
+        }
     }
         
 
     &__title {
+        top: -40px;
+        position: relative;
         box-sizing: border-box;
         display: flex;
         align-items: center;
-        margin: -40px 0 70px -85px;
+        margin: -40px 0 0 -85px;
         padding: 10px 85px;
         width: 595px;
         min-height: 80px;
@@ -96,6 +131,18 @@
         color: @white;
         letter-spacing: 0.02em;
         z-index: 1;
+
+        @media @bw1340 {
+            padding: 10px 18px;
+            max-width: 465px;
+            width: 100%;
+            margin-left: 0;
+        }
+        @media @bw768 {
+            font-size: 14px;
+            padding: 10px 20px;
+            max-width: 225px;
+        }
     }
 }
 
@@ -103,5 +150,9 @@
     &__icon{
         width: 24px;
         height: 24px;
+    }
+    @media @bw768 {
+        width: 36px;
+        height: 36px;         
     }
 }

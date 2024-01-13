@@ -1,7 +1,13 @@
 <article class="article-card @@class">
     <a href="#" class="article-card__link">
       <picture class="article-card__picture">
-        <img src="@@img" alt="@@alt" class="article-card__img" />
+        <source type="image/webp"
+          media="(max-width: 767px)" 
+          srcset="@@webp-mobile"/>
+        <source type="image/webp"
+          media="(min-width: 768px)"
+          srcset="@@webp-desktop"/>
+        <img src="@@img" alt="@@alt" class="article-card__img"/>          
       </picture>
     </a>
     <div class="article-card__info">
