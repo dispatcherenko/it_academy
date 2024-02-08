@@ -1,10 +1,11 @@
 <section class="upcoming @@class"> 
     <div class="upcoming__top-border"></div>
     <div class="upcoming__container">
-        <div class="upcoming__wrapper">
             <h2 class="upcoming__title section-title">МЕРОПРИЯТИЯ</h2>
-            <div class="upcoming__list">
-                @@loop('event-card.html', [
+            <div class="upcoming__swiper swiper swiper--3s js-swiper">
+                <div class="swiper-wrapper">
+                    <div class="upcoming__list">
+                        @@loop('event-card.html', [
                         {
                             "class": "upcoming__event-card",
                             "img": "assets/images/events/Nirvana.jpg",
@@ -38,40 +39,34 @@
                             "time": "16.12.2022 | начало 20.00",
                             "datetime": "2022-12-16T20:00"
                         },
+                        {
+                            "class": "upcoming__event-card",
+                            "img": "assets/images/events/Sade.jpg",
+                            "alt": "stuff",
+                            "webp-desktop": "assets/images/events/Sade.webp",
+                            "webp-mobile": "assets/images/events/Sade-mobile.webp",
+                            "title": "Вечер | The Best of Sade",
+                            "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                            "time": "16.12.2022 | начало 20.00",
+                            "datetime": "2022-12-16T20:00"
+                        },
                         ])
-            </div>
-            <div class="upcoming__slider">
-                    <span>
-                        <svg class="upcoming__arrow upcoming__arrow--rev" width="92" height="62">
-                            <use xlink:href="assets/icons/symbols.svg#link"></use>
-                          </svg>
-                    </span>
-
-                    <div class="upcoming__pages">
-                        <svg class="upcoming__page" width="15" height="2">
-                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                        </svg>
-                        <svg class="upcoming__page" width="15" height="2">
-                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                        </svg>
-                        <svg class="upcoming__page" width="15" height="2">
-                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                        </svg>
-                        <svg class="upcoming__page" width="15" height="2">
-                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                        </svg>
-                        <svg class="upcoming__page" width="15" height="2">
-                            <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                        </svg>
                     </div>
-
-                    <span>
-                        <svg class="upcoming__arrow" width="92" height="62">
-                            <use xlink:href="assets/icons/symbols.svg#link"></use>
-                        </svg>
-                    </span>
+                </div>
+                <footer class="swiper-footer">
+                    <button type="button" class="swiper-arrow-prev arrow arrow--left">
+                      <svg class="arrow__icon" width="92" height="62">
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                      </svg>
+                    </button>
+                    <div class="swiper-pagination"></div>
+                    <button type="button" class="swiper-arrow-next arrow">
+                      <svg class="arrow__icon" width="92" height="62">
+                        <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                      </svg>
+                    </button>
+                </footer>
             </div>
-        </div>
         <a href="#" class="upcoming__link link">Смотреть все</a>
     </div>
     <div class="upcoming__bottom-border"></div>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="ru">
+`
 
 <head>
   <title>Lenni Art</title>
@@ -10,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -40,10 +42,12 @@
         <a href="#" class="btn page-header__user-btn">
           Войти
           <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/symbols.svg#user"></use>
+            <use xlink:href="assets/icons/symbols.svg#user">
+            </use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+
+        <button id="js-navToggle" type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
   </header>
@@ -256,7 +260,7 @@
           Я хочу:
         </h2>
         <div class="partner__choice">
-          <button class="partner__event btn btn--red">Провести мероприятие</button>
+          <button id="js-eventOpenBtn" class="partner__event btn btn--red">Провести мероприятие</button>
           <button class="partner__rent btn">Стать арендатором</button>
 
         </div>

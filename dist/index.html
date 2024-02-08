@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 
+`
+
 <head>
   <title>Lenni Art</title>
   <meta charset="UTF-8" />
@@ -9,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="body">
@@ -40,10 +43,12 @@
         <a href="#" class="btn page-header__user-btn">
           Войти
           <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/symbols.svg#user"></use>
+            <use xlink:href="assets/icons/symbols.svg#user">
+            </use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+
+        <button id="js-navToggle" type="button" class="page-header__nav-toggle"></button>
       </div>
     </div>
   </header>
@@ -64,7 +69,7 @@
           Я хочу:
         </h2>
         <div class="partner__choice">
-          <button class="partner__event btn btn--red">Провести мероприятие</button>
+          <button id="js-eventOpenBtn" class="partner__event btn btn--red">Провести мероприятие</button>
           <button class="partner__rent btn">Стать арендатором</button>
 
         </div>
@@ -130,77 +135,73 @@
       <section class="upcoming home__upcoming">
         <div class="upcoming__top-border"></div>
         <div class="upcoming__container">
-          <div class="upcoming__wrapper">
-            <h2 class="upcoming__title section-title">МЕРОПРИЯТИЯ</h2>
-            <div class="upcoming__list">
-              <article class="event-card  upcoming__event-card">
-                <a href="#" class="event-card__link">
-                  <picture class="event-card__picture">
-                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana-mobile.webp" />
-                    <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/Nirvana.webp" />
-                    <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
-                  </picture>
-                  <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
-                  <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-                  <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
-                </a>
-              </article>
-              <article class="event-card  upcoming__event-card">
-                <a href="#" class="event-card__link">
-                  <picture class="event-card__picture">
-                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/stuff-mobile.webp" />
-                    <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/stuff.webp" />
-                    <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
-                  </picture>
-                  <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-                  <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-                  <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
-                </a>
-              </article>
-              <article class="event-card  upcoming__event-card">
-                <a href="#" class="event-card__link">
-                  <picture class="event-card__picture">
-                    <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Sade-mobile.webp" />
-                    <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/Sade.webp" />
-                    <img src="assets/images/events/Sade.jpg" alt="stuff" class="event-card__img" />
-                  </picture>
-                  <h4 class="event-card__title">Вечер | The Best of Sade</h4>
-                  <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-                  <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
-                </a>
-              </article>
-            </div>
-            <div class="upcoming__slider">
-              <span>
-                <svg class="upcoming__arrow upcoming__arrow--rev" width="92" height="62">
-                  <use xlink:href="assets/icons/symbols.svg#link"></use>
-                </svg>
-              </span>
-
-              <div class="upcoming__pages">
-                <svg class="upcoming__page" width="15" height="2">
-                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                </svg>
-                <svg class="upcoming__page" width="15" height="2">
-                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                </svg>
-                <svg class="upcoming__page" width="15" height="2">
-                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                </svg>
-                <svg class="upcoming__page" width="15" height="2">
-                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                </svg>
-                <svg class="upcoming__page" width="15" height="2">
-                  <use xlink:href="assets/icons/symbols.svg#slider"></use>
-                </svg>
+          <h2 class="upcoming__title section-title">МЕРОПРИЯТИЯ</h2>
+          <div class="upcoming__swiper swiper swiper--3s js-swiper">
+            <div class="swiper-wrapper">
+              <div class="upcoming__list">
+                <article class="event-card  upcoming__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Nirvana-mobile.webp" />
+                      <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/Nirvana.webp" />
+                      <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                    <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022 | начало 18.00</time>
+                  </a>
+                </article>
+                <article class="event-card  upcoming__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/stuff-mobile.webp" />
+                      <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/stuff.webp" />
+                      <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                    <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                    <time datetime="2022-12-14T18:30" class="event-card__time">14.12.2022 | начало 18.30</time>
+                  </a>
+                </article>
+                <article class="event-card  upcoming__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Sade-mobile.webp" />
+                      <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/Sade.webp" />
+                      <img src="assets/images/events/Sade.jpg" alt="stuff" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                    <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                  </a>
+                </article>
+                <article class="event-card  upcoming__event-card">
+                  <a href="#" class="event-card__link">
+                    <picture class="event-card__picture">
+                      <source type="image/webp" media="(max-width: 767px)" srcset="assets/images/events/Sade-mobile.webp" />
+                      <source type="image/webp" media="(min-width: 768px)" srcset="assets/images/events/Sade.webp" />
+                      <img src="assets/images/events/Sade.jpg" alt="stuff" class="event-card__img" />
+                    </picture>
+                    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                    <time datetime="2022-12-16T20:00" class="event-card__time">16.12.2022 | начало 20.00</time>
+                  </a>
+                </article>
               </div>
-
-              <span>
-                <svg class="upcoming__arrow" width="92" height="62">
-                  <use xlink:href="assets/icons/symbols.svg#link"></use>
-                </svg>
-              </span>
             </div>
+            <footer class="swiper-footer">
+              <button type="button" class="swiper-arrow-prev arrow arrow--left">
+                <svg class="arrow__icon" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                </svg>
+              </button>
+              <div class="swiper-pagination"></div>
+              <button type="button" class="swiper-arrow-next arrow">
+                <svg class="arrow__icon" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                </svg>
+              </button>
+            </footer>
           </div>
           <a href="#" class="upcoming__link link">Смотреть все</a>
         </div>
@@ -406,10 +407,10 @@
     </div>
   </footer>
 
-  <div class="pp" id="eventPP">
+  <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
+        <button class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon">
             <use xlink:href="assets/icons/symbols.svg#x"></use>
           </svg>
@@ -503,13 +504,15 @@
           <div class="form__btns">
             <button type="submit" class="form__btn btn">Отправить</button>
             <div class="form__close-button">
-              <button type="button" class="form__close">Закрыть</button>
+              <button type="button" class="form__close js-ppCloseBtn">Закрыть</button>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
+  <script src="scripts\swiper.min.js"></script>
+  <script src="scripts\main.min.js"></script>
 </body>
 
 </html>

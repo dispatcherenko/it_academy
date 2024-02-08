@@ -65,13 +65,14 @@
 
 	&__nav {
 		box-sizing: border-box;
-		display: NONE;
 		align-items: baseline;
 		margin: 0 auto;
 		@media @bw768 {
 			padding: 150px 20px 30px;
 		}
 		@media @bw1020 {
+			display: flex;
+			flex-direction: column;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -82,12 +83,7 @@
 			padding: 211px 30px 30px;
 			background-color: fade(@gray, 98%);
 			transition: transform 0.4s;
-			/*
-			закончив верстку шапки,
-			раскомментируем следующее свойство,
-			чтобы скрыть наше меню:
 			transform: translateX(-100%);
-			*/
 			overflow-x: hidden;
 			overflow-y: auto;
 			@supports (backdrop-filter: blur(20px)) {
@@ -191,16 +187,17 @@
 		}
 		&::before,
 		&::after {
-		  content: "";
-		  display: block;
-		  position: absolute;
-		  top: 19px;
-		  left: 11px;
-		  width: 18px;
-		  height: 2px;
-		  border-radius: 2px;
-		  background-color: @black;
-		  transform-origin: 50% 50%;
+		  	content: "";
+		  	display: block;
+		  	position: absolute;
+		  	top: 19px;
+		  	left: 11px;
+		  	width: 18px;
+		  	height: 2px;
+		  	border-radius: 2px;
+		  	background-color: @black;
+		  	transform-origin: 50% 50%;
+      		transition: transform 0.4s, box-shadow 0.4s;
 		}
 		&::before {
 		  top: 13px;
