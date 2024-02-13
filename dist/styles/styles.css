@@ -317,6 +317,11 @@ blockquote::before {
 b {
   font-weight: 700;
 }
+.arrow {
+  background: none;
+  border: none;
+  padding: 0;
+}
 .arrow__icon {
   width: 91px;
   height: 60px;
@@ -325,7 +330,7 @@ b {
   transition: color 0.2s;
   padding-top: 5px;
 }
-.arrow__icon--left {
+.arrow--left {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
