@@ -2763,6 +2763,7 @@ b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 .contacts__items {
   display: -webkit-box;
