@@ -101,6 +101,7 @@
 }
 
 .field {
+
   &__radio {
     margin-bottom: 9px;
     &:last-child {
@@ -150,12 +151,9 @@
   }
 
   &__text {
-    padding-top: 17px;
-    padding-bottom: 16px;
+    padding: 17px 23px 16px;
     color: @black;
     width: 100%;
-
-    text-align: center;
     &--w55 {
       width: 55px;
     }
@@ -306,10 +304,9 @@
 }
 
 .check {
-  display: block;
+  display: flex;
   box-sizing: border-box;
   position: relative;
-  padding-left: 40px;
 
   &--red {
     color: @red;
@@ -353,7 +350,7 @@
   }
 
   &__mark {
-     position: absolute;
+    display: block; 
      box-sizing: border-box;
      top: 0;
      left: 0;

@@ -336,6 +336,11 @@ b {
           transform: rotate(180deg);
   padding: 0 0 5px;
 }
+span.error {
+  display: block;
+  margin: 4px 0 0;
+  color: #bc3324;
+}
 /**
  * Swiper 11.0.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -3384,11 +3389,9 @@ b {
   gap: 15px;
 }
 .field__text {
-  padding-top: 17px;
-  padding-bottom: 16px;
+  padding: 17px 23px 16px;
   color: #1f1e1e;
   width: 100%;
-  text-align: center;
 }
 .field__text--w55 {
   width: 55px;
@@ -3566,11 +3569,12 @@ b {
   width: 100%;
 }
 .check {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  padding-left: 40px;
 }
 .check--red {
   color: #bc3324;
@@ -3618,7 +3622,7 @@ b {
   border-right: 2px solid #ffffff;
 }
 .check__mark {
-  position: absolute;
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   top: 0;

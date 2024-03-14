@@ -17,6 +17,8 @@
   <script src="scripts\jquery.selectric.min.js"></script>
   <script src="scripts\jquery.mask.min.js"></script>
   <script src="scripts\air-datepicker.js"></script>
+  <script src="scripts\jquery.validate.min.js"></script>
+  <script src="scripts\jquery.validate-init.js"></script>
 </head>
 
 <body class="body">
@@ -372,15 +374,18 @@
         <a href="" class="page-footer__nav-link">Наши проекты</a>
         <a href="" class="page-footer__nav-link">Контакты</a>
       </nav>
-      <form action="" class="page-footer__form subscribe">
+      <form action="https://jsonplaceholder.typicode.com/posts" id="js-subscribeForm" class="page-footer__form subscribe">
         <h3 class="subscribe__title">Подпишись и будь в курсе происходящего</h3>
         <div class="subscribe__wrapper">
-          <input type="email" name="email" class="subscribe__input" placeholder="Email" required />
-          <b type="submit" class="subscribe__submit">Подписаться</b>
+          <div class="subscribe__input-wrapper">
+            <input type="email" name="email" class="subscribe__input" placeholder="Email" required />
+          </div>
+          <button type="submit" class="subscribe__submit">Подписаться</b>
         </div>
         <label class="subscribe__check check">
           <input type="checkbox" class="check__input" name="agree" required />
           <span class="check__mark"></span>
+
           <span class="check__label">Согласен на обработку персональных данных</span>
         </label>
       </form>
@@ -434,7 +439,7 @@
           <br />
           и мы подберем площадку
         </h2>
-        <form class="pp__form form">
+        <form class="pp__form form" id="js-eventForm">
           <div class="form__list">
             <div class="form__field field">
               <h6 class="field__title">Формат мероприятия:</h6>
